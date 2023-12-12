@@ -16,7 +16,7 @@ echo "Running fsx #2 with PID $FSX2_PID and writing output at ./file2.output"
 
 run_fstrim() {
 	echo "Running fstrim"
-	while true; do sudo fstrim -v $WORKING_DIR/scylla >> fstrim_output; sleep 1; done
+	while true; do sudo fstrim -v $WORKING_DIR >> fstrim_output; sleep 1; done
 }
 
 ( run_fstrim ) &
